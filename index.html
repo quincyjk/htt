@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <meta charset="UTF-8">
+    <title>好太太</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/layer.css">
+</head>
+<body>
+<div id="app" >
+
+    <div class="htt-wrap"  v-for="item in index" v-if="start == 0">
+        <!--logo-->
+        <img :src="item.pic"  class="logo" alt="">
+        <!--顶部说明按钮-->
+        <div class="sm-btn-wrap">
+            <div class="sm-btn" @click="prize = 1"><div class="sm-box">{{item.prize}}</div></div>
+            <div class="sm-btn" @click="explains = 1"><div class="sm-box">{{item.explain}}</div></div>
+        </div>
+        <!--main-->
+        <div class="main-box">
+            <div class="main">
+                <img :src="item.contenys" class="contenys" alt="">
+                <div class="btn-wrap">
+                    <div class="btn" @click="start = 1">去抽奖</div>
+                    <div class="btn btn2">
+
+                        0元试用
+                        <img :src="item.icon" class="index-icon" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="htt-wrap"  v-for="item in draw" v-if="start == 1">
+        <!--logo-->
+        <img :src="item.pic"  class="logo" alt="">
+
+        <!--main-->
+        <div class="main-box">
+            <div class="main">
+                <img :src="item.contenys" class="contenys-daw " alt="">
+
+                <div class="draw" id="lottery">
+                    <img src="images/sfa.png" class="img-sfa" alt="">
+                    <table>
+                        <tr>
+                            <td class="item lottery-unit lottery-unit-0">
+                                <div class="img">
+                                    <img class="img-s" src="images/1.png" alt="">
+                                </div>
+                            </td>
+                            <td class="gap"></td>
+                            <td class="item lottery-unit lottery-unit-1">
+                                <div class="img">
+                                    <img class="img-s" src="images/2.png" alt="">
+                                </div>
+                            </td>
+                            <td class="gap"></td>
+                            <td class="item lottery-unit lottery-unit-2">
+                                <div class="img">
+                                    <img class="img-s" src="images/3.png" alt="">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="gap-2" colspan="5"></td>
+                        </tr>
+                        <tr>
+                            <td class="item lottery-unit lottery-unit-7">
+                                <div class="img">
+                                    <img class="img-s"src="images/4.png" alt="">
+                                    <span class="name">谢谢参与</span>
+                                </div>
+                            </td>
+                            <td class="gap"></td>
+                            <td class="">
+                                <a class="draw-btn" href="javascript:">
+                                    <div class="draw-btn-lj" @click="run">立即
+                                        抽奖</div>
+                                </a>
+
+                            </td>
+                            <td class="gap"></td>
+                            <td class="item lottery-unit lottery-unit-3">
+                                <div class="img">
+                                    <img class="img-s" src="images/5.png" alt="">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="gap-2" colspan="5"></td>
+                        </tr>
+                        <tr>
+                            <td class="item lottery-unit lottery-unit-6">
+                                <div class="img">
+                                    <img class="img-s" src="images/6.png" alt="">
+                                </div>
+                            </td>
+                            <td class="gap"></td>
+                            <td class="item lottery-unit lottery-unit-5">
+                                <div class="img">
+                                    <img class="img-s"  src="images/7.png" alt="">
+                                </div>
+                            </td>
+                            <td class="gap"></td>
+                            <td class="item lottery-unit lottery-unit-4">
+                                <div class="img">
+                                    <img class="img-s" src="images/4.png" alt="">
+                                    <span class="name">谢谢参与</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btn-wrap btn-wrap-daw">
+                    <div class="btn btn2-daw" @click="start=0">
+                        返回首页
+                        <img :src="item.icon" class="index-icon" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="htt-wrap-box" v-for="item in fill" v-if="start == 2">
+        <!--我的奖品-->
+            <div class="prize-box-sho">
+                <!--星星-->
+                <div class="xin1-position"><img src="images/xinxin.png" class="xin" alt=""></div>
+                <div class="xin2-position"><img src="images/xinxin.png" class="xin" alt=""></div>
+                <div class="xin3-position"><img src="images/xinxin.png" class="xin" alt=""></div>
+                <div class="fill-title">实物奖品将按填写地址寄送，请认真填写</div>
+
+                <!--地址-->
+                <div class="box-input-adds" >
+                    <input type="text" placeholder="请输入收货人姓名" name="name" class="input-class">
+                    <input type="number" placeholder="请输入联系方式" name="name" class="input-class">
+                    <div class="city-s">
+                       <img src="images/s_03.png" class="img_row" alt="">
+                       <input type="text" id="picker" @click="runadd" placeholder="请选择省市区"  class="input-class">
+                    </div>
+                    <textarea name="#" id="#" cols="30" rows="10" placeholder="请输入详细地址" class="input-class-area"></textarea>
+                </div>
+                <!--btn-->
+                <div class="btn-wrap-add">
+                    <div class="btn" @click="start = 0">返回</div>
+                    <div class="btn btn2">提交</div>
+                </div>
+            </div>
+
+    </div>
+    <!--mask分享-->
+    <div class="mask-wrap" v-if="start == 12">
+        <div></div>
+        <div class="mask-wrap-box">
+        <img src="images/fx.png" class="mask-fx-img" alt="">
+            <span class="fx_share">{{fx_share}}</span>
+        </div>
+    </div>
+    <!--mask中奖-->
+    <div class="zj-mask-in" id="info">
+        <div class="zj-mask-wrap">
+            <div class="zh-mask-box">
+                <a href=""><div class="cancels"><img :src="zh_img_cos" class="zh_imgs" alt=""></div></a>
+                <div class="contents-p">
+                    <div class="inners">{{inner}}</div>
+                    <div class="innerw">{{innerw}}</div>
+                </div>
+                <div class="btn-zh-wrap" >
+                   <div class="btn-zh">确定</div>
+                </div>
+                <img :src="zh_img" class="img-zh" alt="">
+            </div>
+        </div>
+    </div>
+    <!--我的奖品-->
+    <div class="prize-zp-mask" v-if="prize==1">
+        <div class="prize-box">
+             <!--星星-->
+            <div class="xin1-position"><img src="images/xinxin.png" class="xin" alt=""></div>
+            <div class="xin2-position"><img src="images/xinxin.png" class="xin" alt=""></div>
+            <div class="xin3-position"><img src="images/xinxin.png" class="xin" alt=""></div>
+            <div class="xin4-position" @click="prize = 0"><img src="images/cuo_03.png" class="zh_imgs" alt=""></div>
+            
+
+            <!--tab-->
+            <div class="tab-box">
+                <div class="tab-header">
+                    <div class="tab-header-item tab-header-item-le current_tab">未使用</div>
+                    <div class="tab-header-item tab-header-item-ri">已使用</div>
+                </div>
+                <div class="tab-list">
+                    <!--暂无奖品-->
+                    <!--<div class="non-prize">-->
+                        <!--<div>-->
+                        <!--<img src="images/non.png" class="non-prize-img" alt="">-->
+                        <!--<div class="zw-non">暂无奖品</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--tab-->
+                    <div class="tab-item">
+                        <div class="box-inner" v-for="item in tab">
+                            <div class="btn-tab">{{item.btn}}</div>
+                            <img :src="item.logo_user" class="box-inner-img" alt="">
+                            <div class="box-inner-mid">
+                                <div class="box-inner-mid-p">{{item.name}}</div>
+                                <div class="box-inner-mid-w">{{item.contents1}}</div>
+                                <div class="box-inner-mid-w">{{item.contents2}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-item non">
+                        2
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--填写信息-->
+    <div class="adds-mask" v-if="adds == 1">
+        <div class="adds-mask-box">
+            <div class="adds-title">{{add_title}}</div>
+            <div class="adds-name">{{add_name}}</div>
+            <div class="adds-btn" @click="start = 0">返回首页</div>
+        </div>
+    </div>
+    <!--说明-->
+    <div class="prize-zp-mask" v-if="explains==1">
+        <div class="prize-box-explains">
+            <!--星星-->
+            <div class="xin1-position"><img src="images/xinxin.png" class="xin" alt=""></div>
+            <div class="xin2-position"><img src="images/xinxin.png" class="xin" alt=""></div>
+            <div class="xin3-position"><img src="images/xinxin.png" class="xin" alt=""></div>
+            <div class="xin4-position" @click="explains = 0"><img src="images/cuo_03.png" class="zh_imgs" alt=""></div>
+
+              <!--contents-->
+            <div class="explains-contents">
+                <div class="explains-contents-title">活动时间：2018年4月24日-27日，共4天</div>
+                <div class="explains-contents-p">
+                    活动规则：活动期间内，通过当当购物手机客户端成功购买图书的用户，均视为成功参与此次活动；每个用户只可参与一次。
+                </div>
+                <div class="explains-contents-p">
+                    活动奖励：成功参与此次活动的用户，均可获得10元当当网自营图书音像现金券，此礼券当当网自营图书音像品类通用，
+                    无最低消费限制，不可用于其他类商品交易；现金券有效期5月1日-5月31日，礼券不可转让、不可返现。
+                </div>
+                <div class="explains-contents-p">
+                    奖品发放：交易完成后，3个工作日内发送至参与用户账号
+                </div>
+                <div class="explains-contents-p">
+                    补充说明：此次活动不与当当网客户端用户首单奖励5元活动冲突，可同时参与。
+                </div>
+                <div class="explains-contents-p">
+                    此次活动最终解释权归当当网所有。
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/function.js"></script>
+<script src="js/layer.js"></script>
+<script src="js/index.js"></script>
+<script src="js/city.js"></script>
+<script src="js/picker.min.js"></script>
+<script src="js/indexadd.js"></script>
+<script type="text/javascript">
+
+    var lottery = {
+        index: -1, //当前转动到哪个位置，起点位置
+        count: 0, //总共有多少个位置
+        timer: 0, //setTimeout的ID，用clearTimeout清除
+        speed: 20, //初始转动速度
+        times: 0, //转动次数
+        cycle: 50, //转动基本次数：即至少需要转动多少次再进入抽奖环节
+        prize: -1, //中奖位置
+        init: function(id) {
+            if($('#' + id).find('.lottery-unit').length > 0) {
+                $lottery = $('#' + id);
+                $units = $lottery.find('.lottery-unit');
+                this.obj = $lottery;
+                this.count = $units.length;
+                $lottery.find('.lottery-unit.lottery-unit-' + this.index).addClass('active');
+            };
+        },
+        roll: function() {
+            var index = this.index;
+            var count = this.count;
+            var lottery = this.obj;
+            $(lottery).find('.lottery-unit.lottery-unit-' + index).removeClass('active');
+            index += 1;
+            if(index > count - 1) {
+                index = 0;
+            };
+            $(lottery).find('.lottery-unit.lottery-unit-' + index).addClass('active');
+            this.index = index;
+            return false;
+        },
+        stop: function(index) {
+            this.prize = index;
+            return false;
+        }
+    };
+
+    function roll() {
+        lottery.times += 1;
+        lottery.roll(); //转动过程调用的是lottery的roll方法，这里是第一次调用初始化
+
+        if(lottery.times > lottery.cycle + 10 && lottery.prize == lottery.index) {
+            clearTimeout(lottery.timer);
+         var timer=setInterval(function () {
+
+              layer.open({
+                  type: 1,
+                  shadeClose: true,
+                  shade: false,
+                  maxmin: true, //开启最大化最小化按钮
+                  area: ['893px', '600px'],
+                  content: $("#info").html(),
+              });
+             clearInterval(timer)
+          },800)
+
+            lottery.prize = -1;
+            lottery.times = 0;
+            click = false;
+        } else {
+            if(lottery.times < lottery.cycle) {
+                lottery.speed -= 10;
+            } else if(lottery.times == lottery.cycle) {
+                var index = Math* (lottery.count) | 0; //静态演示，随机产生一个奖品序号，实际需请求接口产生
+                // var index = Math.random() * (lottery.count) | 0; //静态演示，随机产生一个奖品序号，实际需请求接口产生
+                lottery.prize = index;
+            } else {
+                if(lottery.times > lottery.cycle + 10 && ((lottery.prize == 0 && lottery.index == 7) || lottery.prize == lottery.index + 1)) {
+                    lottery.speed += 110;
+                } else {
+                    lottery.speed += 20;
+                }
+            }
+            if(lottery.speed < 40) {
+                lottery.speed = 40;
+            };
+            lottery.timer = setTimeout(roll, lottery.speed); //循环调用
+        }
+        return false;
+    }
+
+    var click = false;
+
+    // window.onload = function() {
+    //     lottery.init('lottery');
+    //     $('.draw-btn').click(function() {
+    //         if(click) { //click控制一次抽奖过程中不能重复点击抽奖按钮，后面的点击不响应
+    //             return false;
+    //
+    //         } else {
+    //             lottery.speed = 100;
+    //             roll(); //转圈过程不响应click事件，会将click置为false
+    //             click = true; //一次抽奖完成后，设置click为true，可继续抽奖
+    //             return false;
+    //         }
+    //     });
+    // };
+</script>

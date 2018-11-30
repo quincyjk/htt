@@ -1,0 +1,657 @@
+.htt-wrap{
+    position: fixed;;
+    top:0;
+    width: 100%;
+    height:100%;
+    background: url("../images/bg.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.htt-wrap-box{
+    position: fixed;;
+    top:0;
+    width: 100%;
+    height:100%;
+    background: url("../images/bg.png") no-repeat center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -webkit-display: flex;
+    -webkit-align-items: center;
+}
+.logo{
+    width: 2.04rem;
+    height: 0.36rem;
+    position: absolute;
+    left:0.5rem;
+    top:0.7rem;
+}
+.sm-btn-wrap{
+    position: absolute;
+    right: 0.4rem;
+    display: flex;
+    -webkit-display: flex;
+    z-index: 100000000000000;
+}
+.sm-box{
+    width: 0.55rem;
+    font-family: "方正兰亭中黑_GBK";
+}
+.sm-btn {
+    background: url("../images/border.png") no-repeat;
+    background-size: 100% 100%;
+    width: 1.1rem;
+    height: 1.3rem;
+    margin: 0 0.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -webkit-display: flex;
+    -webkit-align-items: center;
+    font-size: 0.26rem;
+    color:#ebcf97;
+}
+/*main*/
+.main-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -webkit-display: flex;
+    -webkit-align-items: center;
+    position: absolute;
+    top:0;
+}
+.contenys{
+    width: 100%;
+}
+.btn-wrap{
+    margin-top: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -webkit-display: flex;
+    -webkit-align-items: center;
+}
+.btn-wrap-daw{
+    margin-top: 0.35rem;
+}
+.btn{
+    width: 2.85rem;
+    height: 1rem;
+    background:url("../images/btn1.png")no-repeat;
+    background-size: 100% 100%;
+    margin: 0 0.173rem;
+    font-size:0.3rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -webkit-display: flex;
+    -webkit-align-items: center;
+    font-family: "方正兰亭中黑_GBK";
+}
+.btn2{
+    background:url("../images/btn2.png")no-repeat;
+    background-size: 100% 100%;
+}
+.btn2-daw{
+    background:url("../images/btn3.png")no-repeat;
+    background-size: 100% 100%;
+}
+.index-icon{
+    width:0.35rem;
+    height: 0.35rem;
+    margin-left: 0.1rem;
+}
+
+/*抽奖*/
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+}
+.contenys-daw{
+    width: 100%;
+    margin-bottom: -0.35rem;
+}
+.draw {
+    width: 83%;
+    height: 6.2rem;
+    padding:0.45rem;
+    margin: 0 auto;
+    background-image: url(../images/cjbg1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+.draw-bg2{
+    background-image: url(../images/cjbg2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.img-sfa{
+    width: 0.4rem;
+    position: absolute;;
+    right: -0.2rem;
+    top:-0.1rem
+}
+.draw .item {
+    width: 1.7rem;
+    height: 1.7rem;
+    background-image: url(../images/bg1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+.draw .draw-btn {
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;
+    text-decoration: none;
+    background-image: url(../images/bg3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size:0.4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -webkit-display: flex;
+    -webkit-align-items: center;
+}
+.draw-btn-lj{
+    width: 0.8rem;
+    font-weight: bold;
+    color: #ca3328;
+    text-shadow: -1px 2px 1px #fff;
+}
+.draw .item.active {
+    background-image: url(../images/bg3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.draw .img {
+    display: table-cell;
+    width: 150px;
+    height: 61px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.draw .img img {
+    vertical-align: top;
+}
+
+.draw .gap {
+    width: 5px;
+}
+
+.draw .gap-2 {
+    height: 5px;
+}
+
+.draw .name {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.22rem;
+    color: #d01d25;
+}
+
+.img-s{
+    width: 35px;
+    margin: 0 auto;
+}
+
+/*mask分享*/
+.mask-wrap{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    display: flex;
+    -webkit-display: flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+.mask-fx-img{
+    width: 5.22rem;
+    height: 6.42rem;
+    margin-top: 20%;
+}
+.mask-wrap-box{
+    position: relative;
+}
+.fx_share{
+    position: absolute;
+    top:47%;
+    font-size: 0.32rem;
+    color: #fff;
+    text-indent: 20%;
+    display: block;
+    width: 100%;
+}
+/*mask中奖*/
+.zj-mask-in{
+    display:none;
+
+}
+.zj-mask-wrap{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-display: flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+.zh-mask-box{
+    position: relative;
+}
+.img-zh{
+    width: 5.5rem;
+    height: 7.1rem;
+}
+.zh_imgs{
+    width: 0.24rem;
+    height: 0.24rem;
+}
+.cancels{
+    position: absolute;
+    right: 0.3rem;
+    top:2.2rem;
+}
+.contents-p{
+    width: 100%;
+    position: absolute;
+    top:4.2rem;
+
+}
+.inners{
+    font-size: 0.38rem;
+    font-family: "方正兰亭中黑_GBK";
+    text-align: center;
+    color: #fff;
+}
+.innerw{
+    font-size: 0.24rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 0.2rem;
+}
+.btn-zh-wrap{
+    position: absolute;
+    bottom: 0.7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-display: flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+.btn-zh{
+    width: 2rem;
+    height: 0.8rem;
+    background:url("../images/btn1.png")no-repeat;
+    background-size: 100% 100%;
+    font-size: 0.28rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-display: flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+
+/*我的奖品*/
+.prize-zp-mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-display: flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+.prize-box{
+    width: 6.5rem;
+    height: 10.70rem;
+    background: url("../images/select.png")no-repeat;
+    background-size: 100%;
+    position: relative;
+    padding: 2.4rem 0.2rem  0;
+    box-sizing: border-box;
+}
+.prize-box-sho{
+    width: 6.5rem;
+    height: 10.70rem;
+    background: url("../images/shohuo.png")no-repeat;
+    background-size: 100%;
+    position: relative;
+    padding: 2.4rem 0.2rem  0;
+    box-sizing: border-box;
+}
+.xin1-position{
+    position: absolute;
+    top:0.5rem;
+    left: 0;
+
+}
+.xin2-position{
+    position: absolute;
+    top:-0.5rem;
+    right: 0;
+    transform:rotate(80deg);
+}
+.xin3-position{
+    position: absolute;
+    top:0.5rem;
+    right: -0.6rem;
+    transform:rotate(100deg);
+}
+.xin4-position{
+    position: absolute;
+    top:1.8rem;
+    right: 0.4rem
+}
+.xin{
+    height: 0.7rem;
+}
+/*tab*/
+.non-prize-img{
+    width: 3rem;
+    margin-right: 0.4rem;
+}
+.tab-box{
+    width: 100%;
+    height: 8rem;
+    background-color: #d32d35;
+    border-radius: 8px;
+}
+.tab-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-display: flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+.tab-header-item{
+    width: 50%;
+    height: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-display: flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    font-size: 0.28rem;
+    color: #fff;
+    font-family: "方正兰亭中黑_GBK";
+}
+.tab-header-item-le{
+    border-top-left-radius:8px;
+}
+.tab-header-item-ri{
+    border-top-right-radius:8px;
+}
+.current_tab{
+    background-color: #fff;
+    color: #ce1b23;
+}
+.non{
+    display: none;
+}
+.tab-list{
+    height: 85%;
+    overflow: auto;
+    box-sizing: border-box;
+
+}
+.non-prize{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-display: flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+.zw-non{
+    font-size: 0.28rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0.4rem;
+}
+.tab-item{
+    padding-top: 0.2rem;
+
+}
+.box-inner{
+    width: 5.8rem;
+    height: 2.1rem;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-bottom: 0.1rem;
+    box-sizing: border-box;
+    padding: 0.3rem;
+    display: flex;
+    -webkit-display: flex;
+    position: relative;
+}
+.box-inner-img{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.box-inner-mid{
+    padding-left: 0.2rem;
+}
+.box-inner-mid-p{
+    font-size: 0.28rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+.box-inner-mid-w{
+    color: #888888;
+    font-size: 0.24rem;
+}
+.btn-tab{
+    position: absolute;
+    right: 0.18rem;
+    width: 1.4rem;
+    height: 0.7rem;
+    background: url("../images/btn2.png")no-repeat;
+    background-size: 100% 100%;
+    font-size: 0.24rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-display: flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+/*填写地址*/
+.fill-title{
+    font-size: 0.26rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 0.1rem;
+}
+.box-input-adds{
+    font-size: 0;
+    padding: 0.4rem 0.4rem;
+    box-sizing: border-box;
+}
+.input-class{
+    width: 100%;
+    height: 0.8rem;
+    background-color: #a70c14;
+    color: #fff;
+    border:none;
+    text-indent: 0.3rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 0.2rem;
+}
+.input-class::placeholder{
+    color: #fa878d;
+}
+.city-s{
+    position: relative;
+}
+.img_row{
+    position: absolute;
+    top:30%;
+    right: 0.4rem;
+    width: 0.2rem;
+    height: 0.2rem;
+
+}
+.input-class-area{
+    width: 100%;
+    height:2rem;
+    background-color: #a70c14;
+    color: #fff;
+    border:none;
+    text-indent: 0.3rem;
+    padding-top: 0.3rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    box-sizing: border-box;
+}
+.input-class-area::placeholder{
+    color: #fa878d;
+}
+.btn-wrap-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -webkit-display: flex;
+    -webkit-align-items: center;
+}
+/*填写信息*/
+.adds-mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    -webkit-align-items: center;;
+    justify-content: center;
+    -webkit-justify-content:center;
+}
+.adds-mask-box{
+    width: 5.5rem;
+    height: 4.4rem;
+    background: url("../images/zj04.png")no-repeat;
+    background-size: 100%;
+    padding-top: 1rem;
+    box-sizing: border-box;
+}
+.adds-title{
+    font-size: 0.36rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+.adds-name{
+    font-size:0.26rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 0.7rem;
+}
+.adds-btn{
+    width: 2.2rem;
+    height: 0.8rem;
+    background: url("../images/btn1.png")no-repeat;
+    background-size: 100% 100%;
+    font-size: 0.28rem;
+    color: #fff;
+    display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    -webkit-align-items: center;;
+    justify-content: center;
+    -webkit-justify-content:center;
+    margin: 0 auto;
+}
+/*说明*/
+.prize-box-explains{
+    width: 6.5rem;
+    height: 10.70rem;
+    background: url("../images/elxea.png")no-repeat;
+    background-size: 100%;
+    position: relative;
+    padding: 2.4rem 0.2rem 0.2rem;
+    box-sizing: border-box;
+}
+.explains-contents{
+    width: 100%;
+    height:100%;
+    background-color: #b81820;
+    border-radius: 8px;
+    padding: 0.7rem 0.5rem 0;
+    box-sizing: border-box;
+
+}
+.explains-contents-title{
+    font-size: 0.26rem;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+.explains-contents-p{
+    font-size: 0.26rem;
+    color: #fff;
+    margin-bottom: 0.25rem;
+    line-height: 0.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
