@@ -1,4 +1,5 @@
 var nameEl = document.getElementById('picker');
+var nameEl1 = document.getElementById('picker1');
 
 var first = []; /* 省，直辖市 */
 var second = []; /* 市 */

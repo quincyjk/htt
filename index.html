@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id="app" >
-
+<!--首页-->
     <div class="htt-wrap"  v-for="item in index" v-if="start == 0">
         <!--logo-->
         <img :src="item.pic"  class="logo" alt="">
@@ -25,7 +25,7 @@
                 <img :src="item.contenys" class="contenys" alt="">
                 <div class="btn-wrap">
                     <div class="btn" @click="start = 1">去抽奖</div>
-                    <div class="btn btn2">
+                    <div class="btn btn2" @click="start = 2">
 
                         0元试用
                         <img :src="item.icon" class="index-icon" alt="">
@@ -35,6 +35,7 @@
         </div>
 
     </div>
+    <!--抽奖-->
     <div class="htt-wrap"  v-for="item in draw" v-if="start == 1">
         <!--logo-->
         <img :src="item.pic"  class="logo" alt="">
@@ -126,7 +127,8 @@
         </div>
 
     </div>
-    <div class="htt-wrap-box" v-for="item in fill" v-if="start == 2">
+    <!--填写地址-->
+    <div class="htt-wrap-box htt-wrap-box-s" v-for="item in fill">
         <!--我的奖品-->
             <div class="prize-box-sho">
                 <!--星星-->
@@ -141,17 +143,49 @@
                     <input type="number" placeholder="请输入联系方式" name="name" class="input-class">
                     <div class="city-s">
                        <img src="images/s_03.png" class="img_row" alt="">
-                       <input type="text" id="picker" @click="runadd" placeholder="请选择省市区"  class="input-class">
+                       <input type="text" id="picker" @click="runadd" placeholder="请选择省市区"  class="input-class input-class-x">
                     </div>
                     <textarea name="#" id="#" cols="30" rows="10" placeholder="请输入详细地址" class="input-class-area"></textarea>
                 </div>
                 <!--btn-->
                 <div class="btn-wrap-add">
-                    <div class="btn" @click="start = 0">返回</div>
+                   <div class="btn"> <a href="" class="a-fw">返回</a></div>
                     <div class="btn btn2">提交</div>
                 </div>
             </div>
 
+    </div>
+    <!--0元试用-->
+    <div class="htt-wrap-box-oy " v-if="start == 2" v-for="item in fill">
+        <!--logo-->
+        <img src="images/logo.png"  class="logo" alt="">
+        <!--顶部说明按钮-->
+        <div class="sm-btn-wrap sm-btn-wrap-s">
+
+            <div class="sm-btn" @click="sy_explains = 1"><div class="sm-box">试用说明</div></div>
+        </div>
+        <!--我的奖品-->
+        <div class="prize-box-sho-l">
+            <img src="images/oys.png" class="oys" alt="">
+            <div class="fill-title">请认真填写您的个人信息</div>
+
+            <!--地址-->
+            <div class="box-input-adds-s" >
+                <input type="text" placeholder="请输入收货人姓名" name="name" class="input-class">
+                <input type="number" placeholder="请输入联系方式" name="name" class="input-class">
+                <div class="city-s">
+                    <img src="images/s_03.png" class="img_row" alt="">
+                    <input type="text" id="picker1" @click="runadds" placeholder="请选择省市区"   class="input-class input-class-x">
+                </div>
+                <textarea name="#"  cols="30" rows="10" placeholder="请输入详细地址" class="input-class-area"></textarea>
+            </div>
+            <!--btn-->
+            <div class="btn-wrap-add">
+                <div class="btn" ><a href="" class="a-fw">返回</a></div>
+                <div class="btn btn2">提交</div>
+            </div>
+        </div>
+        <div style="height: 2.5rem;width: 100%"></div>
     </div>
     <!--mask分享-->
     <div class="mask-wrap" v-if="start == 12">
@@ -171,7 +205,7 @@
                     <div class="innerw">{{innerw}}</div>
                 </div>
                 <div class="btn-zh-wrap" >
-                   <div class="btn-zh">确定</div>
+                   <div class="btn-zh" id="opern_s">确定</div>
                 </div>
                 <img :src="zh_img" class="img-zh" alt="">
             </div>
@@ -230,7 +264,7 @@
         </div>
     </div>
     <!--说明-->
-    <div class="prize-zp-mask" v-if="explains==1">
+    <div class="prize-zp-mask" v-if="explains == 1">
         <div class="prize-box-explains">
             <!--星星-->
             <div class="xin1-position"><img src="images/xinxin.png" class="xin" alt=""></div>
@@ -260,7 +294,34 @@
             </div>
         </div>
     </div>
+    <!--试用说明-->
+    <div class="prize-zp-mask" v-if="sy_explains==1">
+        <div class="prize-box-explains-sy">
+            <!--星星-->
+            <div class="xin4-position-s" @click="sy_explains = 0"><img src="images/cuo_03.png" class="zh_imgs" alt=""></div>
 
+            <!--contents-->
+            <div class="explains-contents-sy">
+                <div class="explains-contents-title">活动时间：2018年4月24日-27日，共4天</div>
+                <div class="explains-contents-p">
+                    活动规则：活动期间内，通过当当购物手机客户端成功购买图书的用户，均视为成功参与此次活动；每个用户只可参与一次。
+                </div>
+                <div class="explains-contents-p">
+                    活动奖励：成功参与此次活动的用户，均可获得10元当当网自营图书音像现金券，此礼券当当网自营图书音像品类通用，
+                    无最低消费限制，不可用于其他类商品交易；现金券有效期5月1日-5月31日，礼券不可转让、不可返现。
+                </div>
+                <div class="explains-contents-p">
+                    奖品发放：交易完成后，3个工作日内发送至参与用户账号
+                </div>
+                <div class="explains-contents-p">
+                    补充说明：此次活动不与当当网客户端用户首单奖励5元活动冲突，可同时参与。
+                </div>
+                <div class="explains-contents-p">
+                    此次活动最终解释权归当当网所有。
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
