@@ -56,7 +56,9 @@ var app = new Vue({
         adds: 0,
         add_title:'地址填写失败！',
         add_name:'请输入正确的信息',
-        explains:0
+        explains:0,
+        te_price:'3399！',
+        te_explains:0,
     },
     methods:{
         runadds:function () {
