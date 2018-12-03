@@ -32,6 +32,18 @@ $(function () {
     $('body').on('click','.input-class-x',function () {
         document.activeElement.blur();
     });
+
+    $('body').on('click','.load-btn',function(){
+        showloading();
+    });
+
+//    loading
+    function showloading(){
+        $('.loadings-wrap').show();
+      setTimeout(function () {
+          $('.loadings-wrap').hide();
+        },500)
+    }
 //音乐
     //音频标签播放
     function audioAutoPlay(id){
