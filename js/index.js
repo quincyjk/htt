@@ -16,15 +16,22 @@ $(function () {
         $('#layui-m-layer0').hide();
          $('.htt-wrap-box').removeClass('htt-wrap-box-s')
     });
-//防止键盘把当前输入框给挡住
+// 防止键盘把当前输入框给挡住
     $('body').on('click','.input-class',function () {
-        var target = this;
+       var target = this;
         setTimeout(function(){
             target.scrollIntoViewIfNeeded;
+        },100);
+    });
+    $('body').on('blur','.input-class',function () {
+        var target = this;
+        setTimeout(function(){
+            target.scrollIntoView(false);
         },100);
     });
     $('body').on('click','.input-class-x',function () {
         document.activeElement.blur();
     });
+
 
 })

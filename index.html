@@ -165,6 +165,7 @@
             <div class="sm-btn" @click="sy_explains = 1"><div class="sm-box">试用说明</div></div>
         </div>
         <!--我的奖品-->
+        <div class="prize-box-sho-wrap">
         <div class="prize-box-sho-l">
             <img src="images/oys.png" class="oys" alt="">
             <div class="fill-title">请认真填写您的个人信息</div>
@@ -184,6 +185,7 @@
                 <div class="btn" ><a href="" class="a-fw">返回</a></div>
                 <div class="btn btn2">提交</div>
             </div>
+        </div>
         </div>
         <div style="height: 2.5rem;width: 100%"></div>
     </div>
@@ -219,13 +221,11 @@
             <div class="xin2-position"><img src="images/xinxin.png" class="xin" alt=""></div>
             <div class="xin3-position"><img src="images/xinxin.png" class="xin" alt=""></div>
             <div class="xin4-position" @click="prize = 0"><img src="images/cuo_03.png" class="zh_imgs" alt=""></div>
-            
-
             <!--tab-->
             <div class="tab-box">
                 <div class="tab-header">
-                    <div class="tab-header-item tab-header-item-le current_tab">未使用</div>
-                    <div class="tab-header-item tab-header-item-ri">已使用</div>
+                    <div class="tab-header-item tab-header-item-le current_tab" style="cursor: pointer">未使用</div>
+                    <div class="tab-header-item tab-header-item-ri" style="cursor: pointer">已使用</div>
                 </div>
                 <div class="tab-list">
                     <!--暂无奖品-->
