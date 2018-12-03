@@ -1,9 +1,16 @@
 /*input{*/
     /*-webkit-user-select: auto;*/
 /*}*/
-
+#music {
+    position: fixed;
+    top: 1.2rem;
+    right: 0.1rem;
+    width: 0.5em;
+    height: 0.5rem;
+    z-index: 10000;
+}
 .htt-wrap{
-    position: fixed;;
+    position: fixed;
     top:0;
     width: 100%;
     height:100%;
@@ -37,6 +44,7 @@
     -webkit-display: flex;
     -webkit-align-items: center;
 }
+
 .logo{
     width: 2.04rem;
     position: fixed;
